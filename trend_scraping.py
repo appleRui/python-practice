@@ -5,8 +5,8 @@ import datetime
 
 URL = "https://twittrend.jp/"
 
-reaponce = requests.get(URL)
-soup = BeautifulSoup(reaponce.content, 'html.parser')
+responce = requests.get(URL)
+soup = BeautifulSoup(responce.content, 'html.parser')
 
 japan_trend = soup.find(id="japan")
 trend_lists = japan_trend.find_all("p",{"class":"trend"})
